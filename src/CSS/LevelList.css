@@ -1,0 +1,38 @@
+/* Estilos para la lista de niveles */
+.level-list {
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.level-list h2 {
+    color: #4CAF50; /* Verde vibrante para el título */
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.level-item {
+    padding: 12px;
+    background-color: #f9f9f9;
+    margin: 8px 0;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.level-item:hover {
+    background-color: #FFEB3B; /* Amarillo brillante al pasar el mouse */
+    transform: translateX(10px); /* Efecto de desplazamiento hacia la derecha */
+}
+
+.level-item:active {
+    background-color: #4CAF50; /* Verde cuando se hace clic */
+    color: white; /* Texto blanco cuando está activo */
+}

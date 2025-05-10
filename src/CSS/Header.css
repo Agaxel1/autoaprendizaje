@@ -1,0 +1,241 @@
+/* Estilos del Header */
+.header {
+  background-color: #ffffff;
+  color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.university-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Menú principal */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #4CAF50;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFEB3B;
+  transform: scale(1.05);
+}
+
+/* Avatar y perfil */
+.profile {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  /* Separación de la hamburguesa */
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid #4CAF50;
+}
+
+.name {
+  font-weight: 600;
+  margin-right: 15px;
+  color: #333;
+}
+
+.dropdown {
+  position: absolute;
+  top: 60px;
+  /* Asegura que el dropdown no se sobreponga a la imagen */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Contenedor para el icono de hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Estilos Responsivos para pantallas más pequeñas */
+/* Estilos Responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    /* Cambiar la dirección a columna */
+    justify-content: flex-start;
+    /* Alinea los elementos en la parte superior */
+    align-items: flex-start;
+  }
+
+
+  .logo {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: block;
+    margin-left: 0;
+    /* Alineamos el logo a la izquierda */
+    flex-grow: 1;
+    /* Hace que el logo ocupe el máximo espacio posible */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    display: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+    /* Mostrar menú cuando esté activo */
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: #4CAF50;
+    /* Color de fondo de los enlaces */
+    color: white;
+  }
+
+  .hamburger {
+    display: flex;
+    /* Mostrar hamburguesa en móviles */
+  }
+
+   .info {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .hamburger-profile {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .profile {
+    margin-top: 0;
+    /* Elimina el margen superior */
+  }
+
+  .profile img {
+    width: 40px;
+    /* Ajusta el tamaño del avatar */
+    height: 40px;
+    /* Ajusta el tamaño del avatar */
+  }
+
+  /* Aquí movemos los nav-links debajo del avatar y la hamburguesa */
+  .nav-links {
+    order: 2;
+    /* Los nav-links se moverán abajo */
+  }
+
+  /* Aseguramos que el dropdown del perfil se posicione correctamente */
+  .profile .dropdown {
+    top: 50px;
+    /* Colocamos el dropdown debajo del avatar */
+    right: 0;
+    width: 150px;
+  }
+}
+
+/* Estilos para pantallas grandes (PC) */
+@media (min-width: 769px) {
+  .nav {
+    flex-direction: row;
+    /* En pantallas grandes, la nav vuelve a ser horizontal */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+  }
+
+  .logo-mobile {
+    display: none;
+  }
+
+  /* Aseguramos que el menú esté alineado a la izquierda */
+  .nav-links {
+    display: flex;
+    /* Mostrar los enlaces de navegación de forma horizontal */
+    gap: 20px;
+    margin-left: 20px;
+    /* Añadimos espacio a la izquierda de los enlaces */
+  }
+
+  .profile {
+    margin-left: 15px;
+    /* Espacio entre el menú y el avatar */
+  }
+
+  .hamburger {
+    display: none;
+    /* Ocultamos el icono de hamburguesa en pantallas grandes */
+  }
+}
