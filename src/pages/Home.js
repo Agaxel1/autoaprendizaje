@@ -1,6 +1,6 @@
-import React from 'react';
 import Header from '../components/Header';
 import LevelList from '../components/LeveList';
+import Footer from '../components/Footer';
 import '../CSS/Home.css';
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
       <main>
         <LevelList />
       </main>
+      <Footer />
     </div>
   );
 };

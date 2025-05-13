@@ -1,4 +1,7 @@
-/* Estilos del Header */
+:root {
+  --colorNav: #4CAF50;
+}
+
 .header {
   background-color: #ffffff;
   color: #333;
@@ -34,7 +37,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #4CAF50;
+  color: var(--colorNav);
   font-size: 18px;
   font-weight: 600;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -58,7 +61,8 @@
 }
 
 .nav-links.mobile.show {
-  max-height: 500px; /* Lo suficientemente grande para contener todos los elementos */
+  max-height: 500px;
+  /* Lo suficientemente grande para contener todos los elementos */
   opacity: 1;
   transform: translateY(0);
 }
@@ -67,8 +71,7 @@
 .profile {
   display: flex;
   align-items: center;
-  margin-left: 15px;
-  /* Separación de la hamburguesa */
+  position: relative;
 }
 
 .avatar {
@@ -76,27 +79,59 @@
   height: 50px;
   cursor: pointer;
   border-radius: 50%;
-  border: 2px solid #4CAF50;
+  border: 2px solid var(--colorNav);
+  transition: transform 0.3s ease;
 }
 
 .name {
   font-weight: 600;
-  margin-right: 15px;
-  color: #333;
+  font-size: 1.2rem;
+  color: var(--colorNav);
+  letter-spacing: 0.5px;
+  padding-right: 20px;
+  display: inline-block;
+  text-transform: capitalize;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
+
 
 .dropdown {
   position: absolute;
   top: 60px;
-  /* Asegura que el dropdown no se sobreponga a la imagen */
   right: 0;
   background-color: white;
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
+  width: 200px;
+  border-radius: 8px;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  width: 150px;
+  gap: 10px;
+  text-align: center;
+}
+
+.dropdown-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.dropdown-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--colorNav);
+}
+
+.dropdown-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: capitalize;
 }
 
 .dropdown button {
@@ -106,11 +141,14 @@
   text-align: left;
   cursor: pointer;
   font-size: 16px;
+  color: #333;
+  transition: background-color 0.3s ease;
 }
 
 .dropdown button:hover {
   background-color: #f1f1f1;
 }
+
 
 /* Contenedor para el icono de hamburguesa */
 .hamburger {
@@ -176,7 +214,7 @@
     /* Mostrar hamburguesa en móviles */
   }
 
-   .info {
+  .info {
     display: flex;
     gap: 25px;
     align-items: center;
@@ -212,9 +250,14 @@
   /* Aseguramos que el dropdown del perfil se posicione correctamente */
   .profile .dropdown {
     top: 50px;
-    /* Colocamos el dropdown debajo del avatar */
     right: 0;
     width: 150px;
+  }
+
+  .dropdown {
+    width: 250px;
+    top: 55px;
+    /* Ajustamos la posición para móviles */
   }
 }
 
