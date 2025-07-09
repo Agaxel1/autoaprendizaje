@@ -1,0 +1,83 @@
+/* Home.css */
+
+/* Estructura general */
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #f1f8e9 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Patrón decorativo de fondo */
+.home::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(76, 175, 80, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 235, 59, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(33, 150, 243, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Contenido principal */
+main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Efectos decorativos adicionales */
+.home::after {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    linear-gradient(45deg, transparent 45%, rgba(76, 175, 80, 0.02) 49%, rgba(76, 175, 80, 0.02) 51%, transparent 55%),
+    linear-gradient(-45deg, transparent 45%, rgba(255, 235, 59, 0.02) 49%, rgba(255, 235, 59, 0.02) 51%, transparent 55%);
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Home: Ajustamos la dirección del layout para pantallas pequeñas */
+  .home {
+    flex-direction: column;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 15px 0;
+  }
+}
