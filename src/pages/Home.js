@@ -1,16 +1,13 @@
-import Header from '../components/Header';
-import LevelList from '../components/LeveList';
-import Footer from '../components/Footer';
+// Home.jsx
+import CourseList from '../components/CourseList';
 import '../CSS/Home.css';
 
 const Home = () => {
   return (
     <div className="home">
-      <Header />
       <main>
-        <LevelList />
+        <CourseList />
       </main>
-      <Footer />
     </div>
   );
 };
