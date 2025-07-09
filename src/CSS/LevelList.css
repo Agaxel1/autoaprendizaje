@@ -1,0 +1,59 @@
+/* Estilos para la lista de niveles */
+.level-list {
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.level-list h2 {
+  color: #4CAF50; /* Verde vibrante para el título */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.level-item {
+  padding: 12px;
+  background-color: #f9f9f9;
+  margin: 8px 0;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.level-item:hover {
+  background-color: #FFEB3B; /* Amarillo brillante al pasar el mouse */
+  transform: translateX(10px); /* Efecto de desplazamiento hacia la derecha */
+}
+
+.level-item:active {
+  background-color: #4CAF50; /* Verde cuando se hace clic */
+  color: white; /* Texto blanco cuando está activo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .level-list {
+    width: 90%;  /* Aseguramos que ocupe el 90% del ancho en pantallas pequeñas */
+    margin: 20px auto;  /* Reducimos el margen superior */
+    padding: 15px;  /* Reducimos el padding para que se vea más compacto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Sombras más suaves */
+  }
+
+  .level-list h2 {
+    font-size: 20px;  /* Ajustamos el tamaño del título en pantallas pequeñas */
+    margin-bottom: 15px;  /* Reducimos el margen inferior */
+  }
+
+  .level-item {
+    font-size: 16px;  /* Ajustamos el tamaño de los elementos de la lista */
+    padding: 10px;  /* Reducimos el padding */
+  }
+}
